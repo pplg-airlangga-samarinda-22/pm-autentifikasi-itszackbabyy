@@ -13,11 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $nama = $_POST['nama'];
         $telepon = $_POST['telepon'];
         $username = $_POST['username'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
         $sql = "INSERT INTO masyarakat SET nik=?, nama=?, telp=? , username=?, password=?";
         $koneksi->execute_query($sql, [$nik, $nama, $telepon, $username, $password]);
         echo "<script>alert('Pendaftaran Berhasil!')</script>";
         header("location:login.php");
+        // var_dump($password);
     }
 }
 ?>

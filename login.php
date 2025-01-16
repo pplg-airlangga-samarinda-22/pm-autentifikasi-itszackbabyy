@@ -8,13 +8,15 @@
 
         $sql = "SELECT * FROM masyarakat WHERE nik=? AND username=? AND password=?";
         $row = $koneksi -> execute_query($sql, [$nik, $username, $password]);
-
+        
         if (mysqli_num_rows($row) == 1){
             session_start();
             $_SESSION['nik'] = $nik;
             header("location:index.php");
         }else {
-            echo "<script>alert('Gagal Login!')</script>";
+            // echo "<script>alert('Gagal Login!')</script>";
+            var_dump($password);
+        var_dump($sql);
         }
     }
 ?>
@@ -43,6 +45,7 @@
         </div>
         <button type="submit">Login</button>
         <a href="register.php">Register</a>
+        <!-- <a href="./admin/login.php">Login sebagai admin</a> -->
     </form>
 </body>
 </html>

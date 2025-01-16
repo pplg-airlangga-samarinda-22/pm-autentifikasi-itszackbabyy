@@ -1,5 +1,6 @@
 <?php 
 session_start();
+// var_dump($_session);
 require_once "koneksi.php";
 if (empty($_SESSION['nik'])) {
     header("location:login.php");
@@ -17,7 +18,7 @@ if (empty($_SESSION['nik'])) {
 <body>
     <h1>Selamat Datang di Aplikasi Pengaduan Masyarakat</h1>
     <nav>
-        <a href="index.php">Dasboard</a>
+        <a href="#">Dasboard</a>
         <a href="aduan.php">Aduan</a>
         <a href="logout.php">Logout</a>
     </nav>
