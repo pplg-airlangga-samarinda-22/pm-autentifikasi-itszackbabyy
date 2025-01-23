@@ -18,7 +18,10 @@ if (empty($_SESSION['password'])) {
     <h1>Selamat Datang di Aplikasi Pengaduan Masyarakat(ADMIN)</h1>
     <nav>
         <a href="index.php">Dasboard</a>
-        <a href="aduan.php">Aduan</a>
+        <a href="pengaduan.php">Aduan</a>
+        <a href="masyarakat.php">Masyarakat</a>
+        <a href="petugas.php">Petugas</a>
+        <a href="laporan.php">Laporan</a>
         <a href="logout.php">Logout</a>
     </nav>
 </body>
