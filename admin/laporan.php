@@ -30,10 +30,10 @@ require "../koneksi.php";
                 ?>
                 <tr>
                     <td><? ++$no ?></td>
-                    <td><? $row['tgl_pengaduan']?></td>
-                    <td><? $row['nik']?></td>
-                    <td><? $row['isi_laporan']?></td>
-                    <td><? ($row['status']===0)?'menunggu':(($row['status']==='proses')?'diproses':'selesai')?></td>
+                    <td><?=$row['tgl_pengaduan']?></td>
+                    <td><?=$row['nik']?></td>
+                    <td><?=$row['isi_laporan']?></td>
+                    <td><?=($row['status']==0)?'menunggu':(($row['status']==='proses')?'diproses':'selesai')?></td>
                 </tr>
            <?php } ?>
         </tbody>

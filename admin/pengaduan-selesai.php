@@ -23,7 +23,7 @@
 
         //kirim laporan
         $sql = "INSERT INTO tanggapan (id_pengaduan, tgl_tanggapan, tanggapan, id_petugas) values (?, ?, ?, ?)";
-        $row = $koneksi->execute_query($sql, ['$id_pengaduan, $tanggal, $tanggapan, $id_petugas']);
+        $row = $koneksi->execute_query($sql, [$id_pengaduan, $tanggal, $tanggapan, $id_petugas]);
 
         header("location:pengaduan.php");
     }
@@ -52,6 +52,7 @@
             <label for="tanggapan">Tanggapan</label>
             <textarea name="tanggapan" id="tanggapan"></textarea>
         </div>
+        
         <button type="submit" name="selesai">Kirim Tanggapan</button>
     </form>
 </body>

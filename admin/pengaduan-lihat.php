@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $status = $row['status'];
 
     $sql = "SELECT * FROM tanggapan WHERE id_pengaduan=?";
-    $row = $koneksi->execute_query($sql, ['$id'])->fetch_assoc();
+    $row = $koneksi->execute_query($sql, [$id])->fetch_assoc();
     $tanggal_tanggapan = $row['tgl_tanggapan'];
     $tangggapan = $row['tanggapan'];
     $id_petugas = $row['id_petugas'];
